@@ -48,7 +48,7 @@ chrome.storage.local.get(["judge"], function(items){
 });
 function genericOnClick(info){
     const url = info.linkUrl;
-    const selText = info.selectionText.split("\n")[0];
+    const selText = info.selectionText;
     if(url != undefined){
         fetch(url)
             .then(response => response.text())
