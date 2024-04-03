@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "name": "EasyJudge",
+    "icons": {
+      "16" : "EasyJudge.png",
+      "48" : "EasyJudge.png",
+      "64" : "EasyJudge.png",
+      "128" : "EasyJudge.png"
+    },
+    "description": "Make program judge more easier!",
+    "version": "1.0",
+    "action": {
+      "default_popup": "EasyJudge_Popup.html",
+      "default_icon": "EasyJudge.png"
+    },
+    "content_scripts":[
+      {
+        "matches": ["https://*/"],
+        "js": [
+          "Popup.js"
+        ]
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "host_permissions": [
+      "https://*/"
+    ],
+    "permissions": [
+      "storage",
+      "contextMenus",
+      "tabs"
+    ]
+  }

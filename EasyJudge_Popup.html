@@ -1,0 +1,90 @@
+<html>
+    <meta charset="utf-8">
+    <script type="module" src="./Popup.js"></script>
+    <script type="module" src="./util/domController.js"></script>
+    <link href="Popup.css" rel="stylesheet">
+    <body>
+        <div class="radio_container">
+            <input type="radio" class="radio_button" name="toggle_menu" id="code" checked>
+            <label for="code">Code</label>
+            <input type="radio" class="radio_button" name="toggle_menu" id="judge_setting">
+            <label for="judge_setting">Judge Setting</label>
+            <input type="radio" class="radio_button" name="toggle_menu" id="setting">
+            <label for="setting">Setting</label>
+        </div>
+        <div class="code_area">
+            <textarea id="code_block" class="code_block" rows="15" spellcheck="false" wrap="off"></textarea>
+            <div style="padding-top:10px">
+                Get code by URL :
+                <input type="url" id="code_url">
+                <button id="url_code_button" class="submit_button" style="margin-left:5px">Submit</button>
+            </div>
+            <div class="radio_container">
+                <input type="radio" class="run_radio" name="run" id="stdin">
+                <label for="stdin">Standard Input</label>
+                <input type="radio" class="run_radio" name="run" id="judge">
+                <label for="judge">Judge</label>
+            </div>
+            <div class="stdin_container">
+                <textarea id="stdin_input" class="stdin_input" rows="4" spellcheck="false" wrap="off" placeholder="Enter input text for program"></textarea>
+            </div>
+            <div class="judgeMode_container">
+                Problem No
+                <select name="judge_number"></select>
+            </div>
+            <button id="run_button" class="run_button">▶ RUN</button>
+            <div class="judgeResult_container">
+                <h1>Judge Result</h1>
+            </div>
+        </div> 
+        <div class="judge_setting_area">
+            <h2>Judge Format</h2>
+            <textarea id="judge_textarea" style="width:calc(100%); resize:none;" rows="7" spellcheck="false" wrap="off"></textarea>
+        </div>
+        <div class="setting_area">
+            <div class="setting">
+                <h2>Server Setting</h2>
+                <div class="setting_container">Server Address <input type="url" id="server_address"></div>
+                <hr>
+                <h2>Local Judge Setting</h2>
+                <div style="display: flex; flex-direction: row; margin-bottom:7px">Judge Mode
+                    <div style="display: flex; flex-direction: column; margin-left:10px;">
+                        <input id="mode_input" type="range" min="1" max="4" list="tickmarks">
+                        <datalist id="tickmarks">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </datalist>
+                        <div>Mode: <strong id="mode_name">No Judge</strong></div>
+                        <div style="display: flex; flex-direction: row; margin-bottom: -20px;">
+                            <div>
+                                ⚖️ Judge
+                                <textarea id="mode_judge" style="resize: none;" rows="2" spellcheck="false" wrap="off"></textarea>
+                            </div>
+                            <div>
+                                🖥️ User Output
+                                <textarea id="mode_output" style="resize: none;" rows="2" spellcheck="false" wrap="off"></textarea>
+                                <div id="mode_result" style="position: relative; top: -25px; left: 138px; width: 24px;">✔️</div>
+                            </div>
+                        </div>
+                        <div id="mode_detail"></div>
+                    </div>
+                </div>
+                <div class="setting_container">Default Limit Time (s) <input type="number" id="limittime"></div>
+                <div class="setting_container">Default Limit Memory (MB) <input type="number" id="limitmemory"></div>
+                <div class="setting_container">
+                    Language
+                    <select>
+                        <option>C</option>
+                    </select>
+                </div>
+                <hr>
+                <h2>Extension Setting</h2>
+                <div>Dark Mode <input type="checkbox" id="darkmode"></div>
+                <hr>
+                Made by <strong>MOJAN3543</strong>
+            </div>
+        </div>
+    </body>
+</html>
