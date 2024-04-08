@@ -25,14 +25,14 @@ export function setvar(Doc){
     const Menu = chrome.contextMenus.create({
         id: "Judge",
         title: "EasyJudge ― Judge code",
-        contexts: ["link", "selection"]
+        contexts: ["link"]
     });
     for(let index=1; index<=judgeJson.problemList.length; index++){
         chrome.contextMenus.create({
             title: 'Problem #' + index,
             parentId: Menu,
             id: index.toString(),
-                contexts: ["link", "selection"]
+                contexts: ["link"]
         });
     }
 
