@@ -1,4 +1,5 @@
 # EasyJudge
+<img src="https://github.com/MOJAN3543/EasyJudge/blob/master/EasyJudge.png?raw=true"  width="200" height="200"></img>
 ## 프로젝트 소개
 * 코드 채점을 더 쉽게! 자동으로 코드 실행, 결과 값을 비교 해주는 크롬 익스텐션인 EasyJudge입니다.
 * [**EasyJudge Server**](https://github.com/MOJAN3543/EasyJudge_server)와 함께 사용합니다. 
